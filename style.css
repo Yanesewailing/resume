@@ -1,0 +1,135 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: gray;
+}
+.header__logo {
+  color: inherit;
+  text-decoration: none;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.hero__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minimax(290px, 1fr));
+  grid-gap: 20px;
+}
+.hero__container {
+  display: flex;
+  justify-content: center;
+}
+.hero__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+.hero__subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+.hero__description {
+  width: 700px;
+}
+.hero__links {
+  display: flex;
+}
+.hero__link {
+  margin-right: 10px;
+
+  font-size: 30px;
+  color: #000;
+
+  transition: color 0, 3s;
+}
+.hero__link:hover {
+  color: #4facfe;
+}
+
+.hero__box {
+  background: rgb(255, 255, 255); /* Цвет фона */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+  padding: 10px;
+}
+
+.hero__box {
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+
+  border: 10px solid #fff;
+  box-shadow: 2px 5px 10px #000 rgba(0, 0, 0, 0, 5);
+
+  animation: ava-animate 5s infinite alternate;
+}
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 30% 70% 0% 100% / 40% 70% 30% 60%;
+  }
+
+  40% {
+    border-radius: 58% 42% 0% 100% / 24% 58% 42% 76%;
+  }
+
+  60% {
+    border-radius: 58% 42% 0% 100% / 24% 32% 68% 76%;
+  }
+
+  100% {
+    border-radius: 0% 100% 0% 100% / 37% 32% 68% 63%;
+  }
+}
+
+.hero__box-img {
+  animation: ava-bg 5s infinite alternate;
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
